@@ -1,5 +1,4 @@
-FROM java:8-jre
-MAINTAINER 329904894@qq.com
-ADD micro-eureka-1.0.jar /app.jar
-EXPOSE 9001
-ENTRYPOINT ["/usr/bin/java","-jar","app.jar"]
+FROM maven:3.5.3-jdk-8
+MAINTAINER huangll99@126.com
+RUN mkdir .m2
+ADD /root/.m2/* /root/.m2/
